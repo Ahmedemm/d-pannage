@@ -1,6 +1,6 @@
 // Configuration centrale - Remplacer les placeholders par vos vraies données
 export const siteConfig = {
-  name: "S Depannage",
+  name: "M&M dépannage",
   phone: "+32484670060", // Format: +32xxxxxxxxx
   phoneDisplay: "+32 484 67 00 60", // Format d'affichage: +32 XXX XX XX XX
   whatsapp: "https://wa.me/32484670060", // Format: https://wa.me/32xxxxxxxxx
