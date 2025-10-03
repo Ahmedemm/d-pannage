@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Phone, MessageCircle, Mail, MapPin, Send } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
+import Link from "next/link";
 
 type FormValues = {
   name: string;
@@ -29,23 +30,42 @@ export default function ContactPage() {
   const onSubmit = async (values: FormValues) => {
     setStatus("idle");
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error("Request failed");
+      // Construire message
+      const subject = values.subject?.trim() || "Demande d'intervention";
+      const bodyLines = [
+        `Nom: ${values.name}`,
+        `Téléphone: ${values.phone}`,
+        `Email: ${values.email}`,
+        "",
+        "Message:",
+        values.message,
+      ];
+      const body = bodyLines.join("\n");
+
+      const hasEmail = siteConfig.email && !siteConfig.email.startsWith("[");
+
+      if (hasEmail) {
+        const mailto = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailto;
+      } else {
+        const waText = `Demande via formulaire:%0A${encodeURIComponent(body)}`;
+        const waUrl = `${siteConfig.whatsapp}?text=${waText}`;
+        window.open(waUrl, "_blank");
+      }
+
       setStatus("success");
       reset();
+
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', 'form_submit', {
           event_category: 'engagement',
           event_label: 'contact_form'
         });
       }
-      // Redirect to thank you page
+
+      // Redirection vers la page de remerciement (compatible basePath)
       if (typeof window !== 'undefined') {
-        window.location.href = '/contact/merci';
+        window.location.href = `${siteConfig.url}/contact/merci/`;
       }
     } catch (e) {
       setStatus("error");
@@ -160,7 +180,7 @@ export default function ContactPage() {
                     />
                     <label htmlFor="consent" className="text-sm text-slate-700">
                       J'accepte que mes données soient utilisées pour me recontacter, conformément à la
-                      <a href="/confidentialite" className="text-primary underline ml-1">Politique de confidentialité</a>.
+                      <Link href="/confidentialite" className="text-primary underline ml-1">Politique de confidentialité</Link>.
                     </label>
                   </div>
                   {errors.consent && (

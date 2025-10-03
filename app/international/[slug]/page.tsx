@@ -134,7 +134,7 @@ export default function CountryPage({ params }: Props) {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                <a href="/contact">Demander un devis gratuit</a>
+                <Link href="/contact">Demander un devis gratuit</Link>
               </Button>
             </div>
           </div>
@@ -282,7 +282,7 @@ export default function CountryPage({ params }: Props) {
                 </Button>
 
                 <Button asChild variant="outline" className="w-full">
-                  <a href="/contact">Demander un devis</a>
+                  <Link href="/contact">Demander un devis</Link>
                 </Button>
 
                 <div className="border-t mt-6 pt-6">

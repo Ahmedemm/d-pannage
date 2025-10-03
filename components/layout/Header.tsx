@@ -98,7 +98,7 @@ export default function Header() {
               </a>
             </Button>
             <Button asChild size="sm">
-              <a href="/contact">Urgence 24/7</a>
+              <Link href="/contact">Urgence 24/7</Link>
             </Button>
           </div>
 

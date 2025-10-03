@@ -86,8 +86,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon */}
-        <link rel="icon" href="/favicon.png" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href={`${siteConfig.url}/favicon.png`} type="image/png" />
+        <link rel="apple-touch-icon" href={`${siteConfig.url}/apple-touch-icon.png`} />
         
         {/* Google Analytics */}
         {siteConfig.googleAnalyticsId && (

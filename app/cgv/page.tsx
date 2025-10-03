@@ -16,7 +16,7 @@ export default function CGVPage() {
             <h2>Objet</h2>
             <p>Les présentes CGV s’appliquent à toutes les prestations de dépannage et remorquage effectuées par [COMPANY_NAME].</p>
             <h2>Devis et prix</h2>
-            <p>Un devis transparent est communiqué avant toute intervention. Les tarifs comprennent la TVA. Les éventuels suppléments (nuit, jours fériés, longue distance) sont indiqués à l’avance.</p>
+            <p>Un devis transparent est communiqué avant toute intervention. Les éventuels suppléments (nuit, jours fériés, longue distance) sont indiqués à l’avance.</p>
             <h2>Paiement</h2>
             <p>Le paiement s’effectue à la fin de la prestation (CB, espèces, virement). Une facture détaillée est remise.</p>
             <h2>Responsabilité</h2>

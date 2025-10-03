@@ -1,6 +1,7 @@
 import { Phone, MessageCircle, Mail } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
@@ -42,10 +43,10 @@ export default function CTASection() {
               variant="outline"
               className="bg-transparent text-white border-white hover:bg-white/10 font-bold"
             >
-              <a href="/contact">
+              <Link href="/contact">
                 <Mail className="h-5 w-5" />
                 Formulaire
-              </a>
+              </Link>
             </Button>
           </div>
 

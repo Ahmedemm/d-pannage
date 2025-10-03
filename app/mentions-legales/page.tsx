@@ -17,11 +17,9 @@ export default function MentionsLegalesPage() {
             <p>
               Raison sociale: [COMPANY_NAME]<br />
               Adresse: [ADDRESS_LINE], [POSTAL_CODE] [CITY], Belgique<br />
-              TVA: [VAT_NUMBER]<br />
               Email: [EMAIL]
             </p>
-            <h2>Hébergement</h2>
-            <p>Site hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA.</p>
+            {/* Section hébergeur volontairement omise */}
             <h2>Propriété intellectuelle</h2>
             <p>
               L'ensemble du contenu de ce site (textes, images, logos) est protégé par le droit d'auteur.

@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "./Button";
 import { X } from "lucide-react";
+import Link from "next/link";
 
 export default function CookieBanner() {
   const [showBanner, setShowBanner] = useState(false);
@@ -43,9 +44,9 @@ export default function CookieBanner() {
               Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic de notre site. 
               En cliquant sur "Accepter", vous consentez à l'utilisation de tous les cookies. 
               Consultez notre{" "}
-              <a href="/confidentialite" className="underline hover:text-primary">
+              <Link href="/confidentialite" className="underline hover:text-primary">
                 politique de confidentialité
-              </a>
+              </Link>
               .
             </p>
           </div>

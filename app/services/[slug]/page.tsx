@@ -294,7 +294,7 @@ export default function ServiceDetailPage({ params }: Props) {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  <a href="/contact">Demander un devis</a>
+                  <Link href="/contact">Demander un devis</Link>
                 </Button>
               </div>
             </div>

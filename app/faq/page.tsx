@@ -61,7 +61,7 @@ export default function FAQPage() {
         },
         {
           q: "Y a-t-il des frais cachés ?",
-          a: "Non, absolument aucun frais caché. Le prix annoncé lors du devis est le prix final (TVA incluse). Aucun supplément ne sera ajouté sauf si vous demandez des services supplémentaires."
+          a: "Non, absolument aucun frais caché. Le prix annoncé lors du devis est le prix final. Aucun supplément ne sera ajouté sauf si vous demandez des services supplémentaires."
         },
         {
           q: "Quels moyens de paiement acceptez-vous ?",
@@ -220,7 +220,7 @@ export default function FAQPage() {
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                  <a href="/contact">Formulaire de contact</a>
+                  <Link href="/contact">Formulaire de contact</Link>
                 </Button>
               </div>
             </div>

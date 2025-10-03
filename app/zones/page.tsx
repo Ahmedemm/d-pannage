@@ -47,7 +47,7 @@ export default function ZonesPage() {
             {cities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/depannage-${city.slug}`}
+                href={`/depannage/${city.slug}`}
                 className="group bg-white rounded-lg p-6 hover:shadow-xl transition-all border border-slate-200 hover:border-primary"
               >
                 <div className="flex items-start gap-4">

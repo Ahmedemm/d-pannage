@@ -11,11 +11,10 @@ export const siteConfig = {
     city: "[CITY]",
     country: "Belgique"
   },
-  vat: "[VAT_NUMBER]",
   delai: "30 minutes", // Délai moyen d'intervention
   
   // URLs et domaine
-  url: "https://votre-domaine.be",
+  url: "https://ahmedemm.github.io/d-pannage",
   
   // Zones d'intervention
   zones: {

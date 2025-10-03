@@ -48,7 +48,6 @@ export default function TarifsPage() {
   const included = [
     "Devis gratuit et immédiat par téléphone",
     "Intervention 24/7 sans supplément excessif",
-    "TVA incluse dans tous nos tarifs",
     "Paiement sur place (CB, espèces)",
     "Facture détaillée fournie",
     "Assurance tous risques incluse"

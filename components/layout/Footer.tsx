@@ -67,7 +67,7 @@ export default function Footer() {
               {cities.slice(0, 6).map((city) => (
                 <li key={city.slug}>
                   <Link
-                    href={`/depannage-${city.slug}`}
+                    href={`/depannage/${city.slug}`}
                     className="text-slate-300 hover:text-primary transition-colors"
                   >
                     Dépannage {city.name}
@@ -127,7 +127,7 @@ export default function Footer() {
         <div className="border-t border-slate-800 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400">
             <div>
-              © {currentYear} {siteConfig.name}. Tous droits réservés. | TVA: {siteConfig.vat}
+              © {currentYear} {siteConfig.name}. Tous droits réservés.
             </div>
             <div className="flex gap-6">
               <Link href="/mentions-legales" className="hover:text-primary transition-colors">

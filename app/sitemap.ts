@@ -25,10 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
-  const cityRoutes = cities.flatMap((c) => ([
-    { url: `${base}/depannage/${c.slug}`, lastModified: new Date() },
-    { url: `${base}/depannage-${c.slug}`, lastModified: new Date() },
-  ]));
+  const cityRoutes = cities.map((c) => ({
+    url: `${base}/depannage/${c.slug}`,
+    lastModified: new Date(),
+  }));
 
   const countryRoutes = countries.map((c) => ({
     url: `${base}/international/${c.slug}`,
