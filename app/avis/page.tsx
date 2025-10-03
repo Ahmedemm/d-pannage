@@ -3,6 +3,7 @@ import { Star, Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Card, CardContent } from "@/components/ui/Card";
 import { siteConfig } from "@/lib/config";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Avis Clients - Témoignages de nos clients satisfaits",
@@ -244,7 +245,7 @@ export default function AvisPage() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                <a href="/contact">Demander un devis</a>
+                <Link href="/contact">Demander un devis</Link>
               </Button>
             </div>
           </div>

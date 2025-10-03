@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Phone, CheckCircle, Info } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/config";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Tarifs Transparents - Dépannage & Remorquage en Belgique",
@@ -190,7 +191,7 @@ export default function TarifsPage() {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10">
-                <a href="/contact">Formulaire de contact</a>
+                <Link href="/contact">Formulaire de contact</Link>
               </Button>
             </div>
           </div>
