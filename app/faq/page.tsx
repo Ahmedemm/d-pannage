@@ -3,6 +3,7 @@ import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/Accordion";
 import { siteConfig } from "@/lib/config";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "FAQ - Questions fréquentes sur le dépannage automobile",

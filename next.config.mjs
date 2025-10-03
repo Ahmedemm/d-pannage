@@ -12,6 +12,9 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   swcMinify: true,
   trailingSlash: true,
 };

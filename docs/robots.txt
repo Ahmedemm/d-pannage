@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://ahmedemm.github.io/d-pannage
+Sitemap: https://ahmedemm.github.io/d-pannage/sitemap.xml
