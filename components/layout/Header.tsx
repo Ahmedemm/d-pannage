@@ -64,8 +64,8 @@ export default function Header() {
         </div>
 
         {/* Main navigation */}
-        <div className="flex items-center justify-between py-4">
-          <Link href="/" className="flex items-center gap-2" aria-label={siteConfig.name}>
+        <div className="grid grid-cols-3 items-center py-4 lg:flex lg:items-center lg:justify-between">
+          <Link href="/" className="justify-self-center lg:justify-self-auto flex items-center gap-2" aria-label={siteConfig.name}>
             <Image
               src="/logo.png"
               alt={`${siteConfig.name} logo`}
@@ -74,7 +74,13 @@ export default function Header() {
               sizes="(max-width: 1024px) 120px, 140px"
               priority
             />
-            <span className="text-2xl font-bold text-primary">{siteConfig.name}</span>
+            {/* Desktop/tablette: une ligne */}
+            <span className="hidden sm:inline text-2xl font-bold text-primary">{siteConfig.name}</span>
+            {/* Mobile: deux lignes centrées */}
+            <span className="flex sm:hidden flex-col leading-tight text-center">
+              <span className="text-xl font-extrabold text-primary">M&M</span>
+              <span className="text-sm font-semibold text-primary">dépannage</span>
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -106,7 +112,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2"
+            className="lg:hidden p-2 justify-self-end"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? (
