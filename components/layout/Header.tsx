@@ -69,8 +69,9 @@ export default function Header() {
             <Image
               src="/logo.png"
               alt={`${siteConfig.name} logo`}
-              width={72}
-              height={72}
+              width={120}
+              height={55}
+              sizes="(max-width: 1024px) 120px, 140px"
               priority
             />
             <span className="text-2xl font-bold text-primary">{siteConfig.name}</span>
