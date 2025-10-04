@@ -1,9 +1,9 @@
 // Configuration centrale - Remplacer les placeholders par vos vraies données
 export const siteConfig = {
   name: "M&M dépannage",
-  phone: "+32484670060", // Format: +32xxxxxxxxx
-  phoneDisplay: "+32 484 67 00 60", // Format d'affichage: +32 XXX XX XX XX
-  whatsapp: "https://wa.me/32484670060", // Format: https://wa.me/32xxxxxxxxx
+  phone: "+32471495753", // Format: +32xxxxxxxxx
+  phoneDisplay: "+32 471 49 57 53", // Format d'affichage: +32 XXX XX XX XX
+  whatsapp: "https://wa.me/32471495753", // Format: https://wa.me/32xxxxxxxxx
   email: "[EMAIL]",
   address: {
     street: "[ADDRESS_LINE]",
@@ -14,7 +14,7 @@ export const siteConfig = {
   delai: "30 minutes", // Délai moyen d'intervention
   
   // URLs et domaine
-  url: "https://ahmedemm.github.io/d-pannage",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://d-pannage.vercel.app",
   
   // Zones d'intervention
   zones: {

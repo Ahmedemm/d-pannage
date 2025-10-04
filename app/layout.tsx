@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/config";
@@ -73,6 +73,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#1d4ed8",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -86,8 +93,31 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Favicon */}
-        <link rel="icon" href={`${siteConfig.url}/favicon.png`} type="image/png" />
-        <link rel="apple-touch-icon" href={`${siteConfig.url}/apple-touch-icon.png`} />
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        
+        {/* LocalBusiness JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutoRepair",
+              name: siteConfig.name,
+              url: siteConfig.url,
+              telephone: siteConfig.phoneDisplay,
+              areaServed: "Belgique",
+              sameAs: Object.values(siteConfig.social || {}).filter(Boolean),
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: siteConfig.address.street,
+                addressLocality: siteConfig.address.city,
+                postalCode: siteConfig.address.postal,
+                addressCountry: siteConfig.address.country,
+              },
+            }),
+          }}
+        />
         
         {/* Google Analytics */}
         {siteConfig.googleAnalyticsId && (
